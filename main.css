@@ -610,3 +610,24 @@ html, body {
         top: 50%;
     }
 }
+
+/* ===== Made by Nhutcoder ===== */
+.madeby{
+  position: fixed;
+  bottom: 12px;
+  left: 12px;
+  font-size: 16px;
+  font-family: "Dancing Script", cursive;
+  color: white;
+  opacity: 0.85;
+  z-index: 999999;
+  pointer-events: none;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.45);
+  animation: madebyFloat 3s ease-in-out infinite;
+}
+
+@keyframes madebyFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
