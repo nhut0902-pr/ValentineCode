@@ -1,44 +1,50 @@
 // Thay đổi nội dung búc thư ở đây
-var letterContent = "Đây là nội dung của bức thư mà người ấy sẽ đọc được. Hãy viết gì đó cho người đó thôi nào. Cảm ơn bạn đã xem"
+var letterContent =
+  "Happy Valentine nhaaa 💖\n" +
+  "Mình chỉ muốn nói là cảm ơn bạn vì đã luôn xuất hiện đúng lúc.\n" +
+  "Đặc biệt là cảm ơn bạn vì đã tặng cho mình món quà sinh nhật của mình.\n" +
+  "Món quà đó làm mình vui cực kỳ luôn á, vì mình cảm nhận được sự quan tâm của bạn.\n" +
+  "Valentine này mình chúc bạn luôn hạnh phúc, luôn cười thật nhiều.\n" +
+  "Và mong rằng chúng ta sẽ luôn có thật nhiều kỷ niệm đẹp cùng nhau 🥰\n\n" +
+  "From Nhutcoder 💌";
 
 // Tốc độ viết chữ. Số càng nhỏ tốc độ càng nhanh. 50 là tốc độ khá phù hợp
-durationWrite = 50 
+durationWrite = 50;
 
 // Hiệu ứng gõ chữ
+function effectWrite() {
+  var boxLetter = document.querySelector(".letterContent");
+  letterContentSplited = letterContent.split("");
 
-function effectWrite () {
-    var boxLetter = document.querySelector(".letterContent")
-    letterContentSplited = letterContent.split("")
-    
-    letterContentSplited.forEach((val, index) => {
-        setTimeout(() => {
-            boxLetter.innerHTML += val    
-        }, durationWrite* index)
-    })
+  letterContentSplited.forEach((val, index) => {
+    setTimeout(() => {
+      boxLetter.innerHTML += val;
+    }, durationWrite * index);
+  });
 }
 
 window.addEventListener("load", () => {
-    setTimeout(() => {
-        document.querySelector(".container").classList.add("active")
-    }, 500)
-})
+  setTimeout(() => {
+    document.querySelector(".container").classList.add("active");
+  }, 500);
+});
 
-var openBtn = document.querySelector(".openBtn")
+var openBtn = document.querySelector(".openBtn");
 openBtn.addEventListener("click", () => {
-    document.querySelector(".cardValentine").classList.add("active")
-    document.querySelector(".container").classList.add("close")
-})
+  document.querySelector(".cardValentine").classList.add("active");
+  document.querySelector(".container").classList.add("close");
+});
 
-var cardValentine = document.querySelector(".cardValentine")
+var cardValentine = document.querySelector(".cardValentine");
 
 cardValentine.addEventListener("click", () => {
-    cardValentine.classList.toggle("open")
+  cardValentine.classList.toggle("open");
 
-    if(cardValentine.className.indexOf("open") != -1) {
-        setTimeout(effectWrite, 500)
-    } else {
-        setTimeout(() => {
-            document.querySelector(".letterContent").innerHTML = ""
-        }, 1000)
-    }
-})
+  if (cardValentine.className.indexOf("open") != -1) {
+    setTimeout(effectWrite, 500);
+  } else {
+    setTimeout(() => {
+      document.querySelector(".letterContent").innerHTML = "";
+    }, 1000);
+  }
+});
