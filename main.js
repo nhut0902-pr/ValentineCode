@@ -1,5 +1,11 @@
 // Thay đổi nội dung búc thư ở đây
-var letterContent = "Đây là nội dung của bức thư mà người ấy sẽ đọc được. Hãy viết gì đó cho người đó thôi nào. Cảm ơn bạn đã xem"
+var letterContent = "Happy Valentine nhaaa 💖
+Mình chỉ muốn nói là cảm ơn bạn vì đã luôn xuất hiện đúng lúc.
+Đặc biệt là cảm ơn bạn vì đã tặng cho mình món quà sinh nhật của mình.
+Món quà đó làm mình vui cực kỳ luôn á, vì mình cảm nhận được sự quan tâm của bạn.
+Valentine này mình chúc bạn luôn hạnh phúc, luôn cười thật nhiều.
+Và mong rằng chúng ta sẽ luôn có thật nhiều kỷ niệm đẹp cùng nhau 🥰
+From Nhutcoder 💌"
 
 // Tốc độ viết chữ. Số càng nhỏ tốc độ càng nhanh. 50 là tốc độ khá phù hợp
 durationWrite = 50 
